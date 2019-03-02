@@ -3,3 +3,6 @@
 2. 无法手动编程的应用（自动直升机（autonomous helicopter），手写识别(handwriting recognition)，自然语言处理（NLP），计算机视觉）  
 3. 自定义程序（self-customizing programs）（亚马逊商品推荐）  
 4. 理解人类学习（大脑）  
+# 机器学习算法
+1. 监督学习（supervised learning）
+2. 无监督学习（supervised learning）
