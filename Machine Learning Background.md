@@ -7,4 +7,6 @@
 1. 监督学习（supervised learning）  
    + 给算法一个数据集，其中包含了正确的答案（right answers），算法预测更多的数据集。=> 回归问题（regression problem)
    + 回归问题：预测连续的数值输出（predict continuous valued output）
+   + 分类问题（classification problem）：discrete valued output（0, 1 or 2, etc.）
+   + 支持向量机（Support Vector Machine）=>无穷多特性输入（attributes）
 2. 无监督学习（supervised learning）
