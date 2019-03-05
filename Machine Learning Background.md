@@ -14,3 +14,4 @@
    + 其他应用：计算机集群（computer clusters）、社交网络分析、市场细分（market segmentation）、天文数据分析。
    + 鸡尾酒聚会问题（cocktail party problem）：
       + Octave编程环境：[W,s,v] = svd((repmat(sum(x.*x,1), size(x,1), 1).*x)*x');
+      + svd: singular value decomposition(奇异值分解) function。
