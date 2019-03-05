@@ -10,3 +10,7 @@
    + 分类问题（classification problem）：discrete valued output（0, 1 or 2, etc.）
    + 支持向量机（Support Vector Machine）=>无穷多特性输入（attributes）
 2. 无监督学习（supervised learning）
+   + 无标签（label）的数据集，聚类算法（clustering algorithm）=> 谷歌新闻（新闻专题：cohesive news stories），基因组学。
+   + 其他应用：计算机集群（computer clusters）、社交网络分析、市场细分（market segmentation）、天文数据分析。
+   + 鸡尾酒聚会问题（cocktail party problem）：
+      + Octave编程环境：[W,s,v] = svd((repmat(sum(x.*x,1), size(x,1), 1).*x)*x');
