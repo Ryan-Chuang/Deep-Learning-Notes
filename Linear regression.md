@@ -1,5 +1,4 @@
 # 单变量线性回归 
-## 模型描述
 1. 房价的训练集 （Training set）
    + notations：
      + m：training examples的数量
@@ -35,11 +34,17 @@
       + 对梯度下降算法而言，即便学习率固定，其对θi所进行的步进也会随着J的收敛而越来越小。
 4. 线性回归的梯度下降法
    + 代价函数：J = sum( (θ1+θ2x - y)^2 )/2m; (x和y取所有训练集)
-   + 偏导项： dJ/dθ0 = sum( (θ1+θ2x - y)^2 ) / m;   
-             dJ/dθ1 = sum( (θ1+θ2x - y)^2 ) * x/m;
+   + 偏导项： dJ/dθ0 = sum( (h(x) - y)^2 ) / m;   
+             dJ/dθ1 = sum( (h(x) - y)^2 ) * x/m;
    + 对于线性回归问题，其代价函数通常呈凸函数类型（convex function）
    + 又称 Batch Gradient Descent
       + 梯度下降的每一个步进都遍历了所有的训练集
-   + 正规方程组方法（normal equations methods）可以替代梯度下降法来求解线性回归问题（线性代数知识），但是对于较大的训练集，梯度下降方法更适合。    
+   + 正规方程组方法（normal equations methods）可以替代梯度下降法来求解线性回归问题（线性代数知识），但是对于较大的训练集，梯度下降方法更适合。   
+# 多变量线性回归
+1. 多特征量（Multiple features/variables）
+   + 假定特征量的数量是n,则每一个训练集的输入都是一个n维的向量（h(x) = θ1x1 + θ2x2 + ... + θnxn）
+   + 向量形式：参数向量Θm = [θ1, θ2, ... , θn]， 特征向量xm = [x1, x2, ... , xn]，则h(x) = transpose(Θm)xm
+2. 多元梯度下降法
+   + https://github.com/Ryan-Chuang/DL_IMGS/blob/master/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E7%AE%97%E6%B3%95.PNG
 
    
