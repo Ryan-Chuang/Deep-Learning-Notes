@@ -45,6 +45,6 @@
    + 假定特征量的数量是n,则每一个训练集的输入都是一个n维的向量（h(x) = θ1x1 + θ2x2 + ... + θnxn）
    + 向量形式：参数向量Θm = [θ1, θ2, ... , θn]， 特征向量xm = [x1, x2, ... , xn]，则h(x) = transpose(Θm)xm
 2. 多元梯度下降法
-   + https://github.com/Ryan-Chuang/DL_IMGS/blob/master/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E7%AE%97%E6%B3%95.PNG
+   +  ![image](https://github.com/Ryan-Chuang/DL_IMGS/blob/master/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E7%AE%97%E6%B3%95.PNG)
 
    
