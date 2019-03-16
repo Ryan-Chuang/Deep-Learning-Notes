@@ -69,4 +69,5 @@
    + ![image](https://github.com/Ryan-Chuang/DL_IMGS/blob/master/%E6%AD%A3%E8%A7%84%E6%96%B9%E7%A8%8B.png)
    + 正规方程无需特征缩放。
    + **由于(X^T*X)是一个n*n的矩阵，如果n很大，则该矩阵求逆会很慢(O(n^3))，此时用梯度下降法会更好。n小于10000用正规方程是OK的。**
-   
+5. 正规方程及不可逆性（normal equation and non-invertibility）
+   + 
