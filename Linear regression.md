@@ -66,7 +66,7 @@
 4. 正规方程（normal equation）
    + 正规方程是一种解析地求解θ使得J(θ)最小的方式。
    + 假设输入训练集有n个features，共m个样本，则θ = (X^T*X)^-1*X^T*Y，其中X和Y分别是输入和输出参数矩阵，X^T是X的转置，X^-1是X的逆。X是m*(n+1)的矩阵，Y是m*1的矩阵。
-   + ![image]https://github.com/Ryan-Chuang/DL_IMGS/blob/master/%E6%AD%A3%E8%A7%84%E6%96%B9%E7%A8%8B.png
+   + ![image] https://github.com/Ryan-Chuang/DL_IMGS/blob/master/%E6%AD%A3%E8%A7%84%E6%96%B9%E7%A8%8B.png
    + 正规方程无需特征缩放。
    + **由于(X^T*X)是一个n*n的矩阵，如果n很大，则该矩阵求逆会很慢(O(n^3))，此时用梯度下降法会更好。n小于10000用正规方程是OK的。**
    
