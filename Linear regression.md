@@ -70,4 +70,10 @@
    + 正规方程无需特征缩放。
    + **由于(X^T*X)是一个n*n的矩阵，如果n很大，则该矩阵求逆会很慢(O(n^3))，此时用梯度下降法会更好。n小于10000用正规方程是OK的。**
 5. 正规方程及不可逆性（normal equation and non-invertibility）
-   + 
+   + 不可逆问题指的是(X^T * X)可能是不可逆矩阵（奇异（singular）或退化矩阵（degenerate））。
+   + 不可逆通常有如下两种情况：
+      + 包含了多余的features（features线性相关）；-> 如x1 = 3.14 * x2
+      + 太多的features（如m小于或等于n）；=> 删除一些features，或者正则化（regularization）
+   + 事实上，即使出现不可逆问题，数值方法也可求出最优的θ（伪逆函数手段），如Octave中的pinv()函数总能计算(X^T * X)^-1
+   
+      
