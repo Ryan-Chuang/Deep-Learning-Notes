@@ -9,3 +9,18 @@
     + search “Mypy Args”
     + click on "Edit in settings.json" link
     + edit the json to include: ```"python.linting.pylintArgs": ["----extension-pkg-whitelist=1xml"]```
+4. Loss.backward()对于Loss是一个标量的时候，其第一个参数即```gradient```可以无需指定，但如果Loss是一个多维矢量，则需要指定一个与之维度一致的tensor。如：
+    ```python
+    import torch
+    m = torch.tensor([2, 3], dtype = torch.float, requires_grad=True)
+    j = torch.zeros(2 ,2)
+    k = torch.zeros(2)
+
+    k[0] = m[0] ** 2 + 3 * m[1]
+    k[1] = m[1] ** 2 + 2 * m[0]
+    
+    grad_tensor = torch.FloatTensor([1, 1])     #维度与k一致，是1x2的tensor
+    k.backward(grad_tensor)
+    print(m.grad.data)
+    ```
+    上述代码输出为```tensor([6., 9.])```。这是由于，grad_tensor的第一个元素，指定对m[0]反向求导，并将求导的结果与grad_tensor的第一个元素相乘；由于autograd具有累加性质，所以最终的结果是dk0/dm0 + dk1/dm0 = 4 + 2 = 6；同理，第二个元素求导的结果是dk0/dm1 + dk1/dm1 = 3 + 6 = 9;
