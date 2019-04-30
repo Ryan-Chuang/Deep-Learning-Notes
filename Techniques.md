@@ -21,8 +21,8 @@ def k_fold(k, X_train, y_train, num_epochs, learning_rate, weight_decay, batch_s
   train_l_sum, valid_l_sum = 0, 0
   for i in range(k):
     data = get_k_fold_data(k, i, X_train, y_train)
-    net = get_net()
-    train_ls, valid_ls = train(net, *data, num_epochs, learning_rate, weight_decay, batch_size)
+    net = get_net()       # neural network defined in the d2l book
+    train_ls, valid_ls = train(net, *data, num_epochs, learning_rate, weight_decay, batch_size)   # nn training function
     train_l_sum += train_ls[-1]
     valid_l_sum += valid_ls[-1]
     if i == 0:
